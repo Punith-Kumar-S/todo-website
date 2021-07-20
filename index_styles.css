@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8em;
+    background-color: cadetblue;
+}
+
+h1{
+    color: white;
+    font-size: 4em;
+    opacity: 0.8;
+    font-family: 'Poppins';
+}
+
+
+
+#todo{
+    width: 250px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    outline: none;
+    font-family: 'Grandstander';
+}
+
+#todo::placeholder{
+    color:  rgba(0, 0, 0, 0.5);
+    font-family: 'Grandstander';
+}
+
+.normal{
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 10px;
+    color: white;   
+    font-size: 22px;
+    padding-left: 15px;
+    font-family: 'Grandstander';
+}
+
+.normal:hover{
+   cursor : pointer;
+}
+
+.btn{
+    outline: none;
+}
+
+.popup-container{
+  
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup{
+    background-color: white;
+    width: 300px;
+    max-width: 100%;
+    color: rgba(0,0,0,0.9);
+    position: relative;
+    top: 2em;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close{
+       font-size: 26px;
+       cursor: pointer;
+       display: block;
+       color: rgba(0,0,0,0.7);
+       border-radius: 10%;
+}
+
+
+.done{
+    text-decoration: line-through;
+    background-color: white;
+    color:  rgba(0, 0, 0, 0.7);
+    font-family: 'Grandstander';
+}
